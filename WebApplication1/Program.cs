@@ -8,13 +8,11 @@ using Repository.Implementations;
 using Repository.Interfaces;
 using Serilog;
 using Services.Extensions;
-using Models;
 using System.Text;
 using API.Config;
 using Data.Migrations;
 
 var builder = WebApplication.CreateBuilder(args);
-
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .CreateLogger();
